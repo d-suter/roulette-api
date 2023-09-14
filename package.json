@@ -1,0 +1,16 @@
+{
+  "name": "roulette-api",
+  "version": "1.0.0",
+  "description": "Spin the wheel with ease! A robust and lightweight API for simulating roulette spins, odds, and payouts. Perfect for integration into casino-themed projects or simulations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "uuid": "^9.0.1"
+  }
+}
