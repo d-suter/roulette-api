@@ -1,14 +1,12 @@
 import requests
 import time
 
-# The URLs to be tested
 urls = [
     "http://localhost:3000/spin/eu",
     "http://localhost:3000/spin/fr",
     "http://localhost:3000/spin/usa"
 ]
 
-# Number of times to send a request to each URL
 request_count = 100000
 
 def spam_url(url, count):
@@ -19,5 +17,11 @@ def spam_url(url, count):
         except requests.ConnectionError:
             print(f"Failed to connect to {url}")
 
+start_time = time.time()
+
 for url in urls:
     spam_url(url, request_count)
+
+end_time = time.time()
+
+print(f"Total time taken: {end_time - start_time:.2f} seconds")
