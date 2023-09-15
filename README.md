@@ -1,70 +1,76 @@
-# Roulette API
+# 🎲 Roulette API 
 
-An API designed to simulate roulette spins, return results, and validate them.
+An API designed to simulate roulette spins across various modes, return results, and validate them.
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
+## 📝 Table of Contents
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [API Endpoints](#-api-endpoints)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-## Installation
+## 🛠 Installation
 
-1. Clone the repository:
+1. 📥 Clone the repository:
 ```bash
 git clone https://github.com/ceodavee/roulette-api.git
 ```
 
-2. Navigate to the project directory:
+2. 📍 Navigate to the project directory:
 ```bash
 cd roulette-api
 ```
 
-3. Install the required dependencies:
+3. 📦 Install the required dependencies:
 ```bash
 npm install
 ```
 
-## Usage
+## 🚀 Usage
 
-Start the API server:
+🔥 Start the API server:
 
 ```bash
 npm start
 ```
 
-## API Endpoints
+## 🌐 API Endpoints
 
-### Spin the Roulette
+### 🔄 Spin the Roulette
 
-**Endpoint**: `/spin`
+**Endpoint**: `/spin/<mode_or_alias>`
+
+For mode or alias, you can use: `European`, `eu`, `europe`, `French`, `fr`, `france`, `American`, `us`, `usa`, and their respective variants.
 
 **Method**: `GET`
+
+**Example**: `/spin/eu`
 
 **Response**:
 ```json
 {
-    "id": 1,
+    "hash": "1a2b3c4d...",
     "number": 12,
     "color": "Red",
-    "hash": "1a2b3c4d..."
+    "evenOdd": "even"
 }
 ```
 
-### Verify Spin Result
+### 🔎 Verify Spin Result
 
 **Endpoint**: `/verify/:hash`
 
 **Method**: `GET`
 
+**Example**: `/verify/1a2b3c4d...`
+
 **Response**:
 ```json
 {
-    "id": 1,
+    "mode": "European",
     "number": 12,
     "color": "Red",
-    "hash": "1a2b3c4d..."
+    "evenOdd": "even"
 }
 ```
 or
@@ -74,7 +80,10 @@ or
 }
 ```
 
-## Contributing
+## 🤝 Contributing
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you'd like to change.
 
+## 📜 License
+
+This project is licensed under the MIT License.
